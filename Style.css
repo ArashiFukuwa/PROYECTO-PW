@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: cornsilk !important;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+#colortitulo{
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#iconotitulo{
+  color: black;
+}
+.page-footer{
+  background-color: #94F3E3 !important;
+  color: black !important;
+}
+
+.footer-copyright{
+  color: black !important;
+}
+
+#navbar1{
+  background-color: #94F3E3;
+}
+#logodiv{
+ 
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+#logo{
+  text-align: center;
+  width: 500px;
+  margin-top: 100px;
+}
+#myCarousel{
+   /*height: 600px;*/
+   height: auto;
+   width: auto;
+
+}
+
+#perro{
+  width: auto;
+}
+
+#productotitulo{
+  text-align: center;
+  font-family: Thanks Autum;
+  margin-bottom: 100px;
+}
+
+#divcard{
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 100px;
+}
+
+#myCarousel{
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+#imagenpata{
+  max-width: 400px;
+  max-height: auto;
+}
+
+#card1{
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#spanfooter{
+  font-size: 17px;
+  color:chocolate;
+}
+
+#teayudamosfooter{
+  font-size: 22px;
+}
+#quienessomos{
+  font-size: 22px;
+}
+
+#iconsdireccion{
+  color: chocolate;
+}
+
+#descuentos{
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 500px){
+  .nav .brand-logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+}
+
+#registrarse{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#Loguearse{
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+#modal1{
+  border-radius: 25px;
+  padding: 5px;
+}
+
+#modal2{
+  border-radius: 25px;
+  padding: 5px;
+}
+
+#modal12{
+  border-radius: 25px;
+  background-color: #94F3E3;
+  padding: 2%;
+}
+
+#modal13{ 
+  border-radius: 25px;
+  background-color: #94F3E3;
+  padding: 2%;
+}
+
+#titulosnab {
+  font-size: medium;
+  color: black;
+}
+
+#botonregistrarse{
+  border-radius: 25px;
+}
+
+#botoniniciosesion{
+  border-radius: 25px;
+}
+
+#articulocatalogo{
+  text-align: center;
+  font-family: Thanks Autum;
+  margin-bottom: 100px;
+  
+}

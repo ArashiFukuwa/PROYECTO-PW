@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="Style.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!--Nabvar-->
+  <nav>
+    <div class="nav-wrapper" id="navbar1">
+      <a href="Home.html" class="brand-logo"><strong id="colortitulo">Animalitos</strong> <i class="material-icons"
+          id="iconotitulo">pets</i></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+
+        <li><a href="Home.html"> <strong id="titulosnab">Inicio</strong></a></li>
+        <li><a href="Catalogo.html"><strong id="titulosnab">Catalogo</strong></a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal2"><strong id="titulosnab">Iniciar
+              Sesión</strong></a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1"><strong
+              id="titulosnab">Registro</strong></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+
+    <li><a href="Home.html">Inicio</a></li>
+    <li><a href="Catalogo.html">Catalogo</a></li>
+    <li><a class="waves-effect waves-light btn modal-trigger" href="#modal2">Iniciar Sesión</a></li>
+    <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Registro</a></li>
+  </ul>
+
+  <script>document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });</script>
+
+  <!-- Estructura del modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content" id="modal13">
+      <h4 id="registrarse">Registrarse</h4>
+      <p id="registrarse">Datos de Registro</p>
+    </div>
+    <div class="modal-footer">
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="text"></label>
+          <input type="text" class="form-control" id="name" placeholder="Ingrese nombres" name="text">
+        </div>
+        <div class="form-group">
+          <label for="text"></label>
+          <input type="text" class="form-control" id="apellido" placeholder="Ingrese Apellidos" name="text">
+        </div>
+        <div class="form-group">
+          <label for="date"></label>
+          <input type="date" class="form-control" id="FechaNacimiento" placeholder="Fecha de Nacimiento" name="date">
+        </div>
+        <div class="form-group">
+          <label for="email"></label>
+          <input type="email" class="form-control" id="email" placeholder="Ingrese email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd"></label>
+          <input type="password" class="form-control" id="Contraseña" placeholder="Ingrese contraseña" name="password">
+        </div>
+        <button type="submit" class="btn btn-outline-dark" id="botonregistrarse"><i class="material-icons">person_add</i>Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content" id="modal12">
+      <h4 id="Loguearse">Autentificación</h4>
+      <p id="Loguearse">Datos de Usuario</p>
+    </div>
+    <div class="modal-footer">
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="email"> </label>
+          <input type="email" class="form-control" id="email" placeholder="Ingrese email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd"> </label>
+          <input type="password" class="form-control" id="Contraseña" placeholder="Ingrese contraseña" name="password">
+        </div>
+        <button type="submit" class="btn btn-outline-dark" id="botoniniciosesion"><i class="material-icons">person_add</i>Autentificarse </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!--Nabvar modal-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
+
+  <!--Logo de inicio pagina-->
+  <div id="logodiv">
+    <img src="Imagenes/catalogo logo.png" alt="Logo perritos" id="logo">
+  </div>
+
+  <div class="container" id="containercarousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+
+      <!-- Carrusel -->
+      <div class="carousel-inner">
+        <div class="item active" id="perro">
+          <img src="Imagenes/catalogo carusel 1.jpg" alt="perrito1">
+        </div>
+
+        <div class="item" id="perro">
+          <img src="Imagenes/catalogo carusel 2.jpg" alt="perrito2">
+        </div>
+
+        <div class="item" id="perro">
+          <img src="Imagenes/catalogo carusel 3.png" alt="perrito3">
+        </div>
+        <div class="item" id="perro">
+          <img src="Imagenes/catalogo carusel 5.png" alt="perrito4">
+        </div>
+        <div class="item" id="perro">
+          <img src="Imagenes/catalogo 4.png" alt="perrito5">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+
+
+  <!--Productos de ventas-->
+
+  <div class="container mt-3" id="containercatalogos">
+    <h2 id="articulocatalogo"><strong> <u><i class="material-icons" id="iconotitulo">pets</i> Articulos<i
+            class="material-icons" id="iconotitulo">pets</i> </u></strong></h2>
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="navcatalogos">
+      <li class="nav-item" id="navcatalogos">
+        <a class="nav-link active" data-toggle="tab" href="#CAMAS"><strong> Camas</strong></a>
+      </li>
+      <li class="nav-item" id="navcatalogos">
+        <a class="nav-link" data-toggle="tab" href="#vestuario-y-accesorios"><strong>Vestuario & Accesorios</strong></a>
+      </li>
+      <li class="nav-item" id="navcatalogos">
+        <a class="nav-link" data-toggle="tab" href="#juguetes"><strong>Juguetes</strong></a>
+      </li>
+      <li class="nav-item" id="navcatalogos">
+        <a class="nav-link" data-toggle="tab" href="#Rascador"><strong>Rascadores</strong></a>
+      </li>
+      <li class="nav-item" id="navcatalogos">
+        <a class="nav-link" data-toggle="tab" href="#bebederos"><strong>Bebederos</strong></a>
+      </li>
+
+    </ul>
+
+
+    <!-- CATALOGOS -->
+    <div class="tab-content" id="contcatalogo">
+      <div id="CAMAS" class="container tab-pane active"><br>
+        <h3 id="articulocatalogo"> </h3>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/Producto 1.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">CAMA / TUNEL PLEGABLE PARA GATOS $21.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/entretencion/gatos-diversion/cama-plegable-con-tunel-para-gatos/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>El juguete de túnel para gatitos es perfecto y acolchado, fácil de conectar con cremallera. A tu gato
+                  le encantará su nuevo túnel con zona de cama relajante.
+
+                  Combina una cama con un juguete de túnel, y las mascotas pueden tomar una siesta, correr, esconderse y
+                  buscar, perseguir, cazar y dormir en nuestra cama de tubo para gatos. Con dos funciones de sueño y
+                  juego, es un juguete interactivo para gatos.
+
+                  Cojín extraíble: con cama extraíble para mascotas, suave y hay suficiente espacio para gatos o perros
+                  pequeños para jugar.
+
+                  Medidas: 105cm de largo – 27cm de ancho del tunel – profundidad de la cama 45cm</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 2.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">CAMA COLOR GRIS/CAFE $24.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a href="https://www.clubdeperrosygatos.cl/shop/camas-y-estar/camas/cama-color-gris-cafe/">Tienda de
+                    articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Cama color gris
+
+                  Talla L
+
+                  Medidas: 60 de diametro – 23 de alto.
+
+                  CAMA NO INDESTRUCTIBLE. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/catalogox 6.png" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">CAMA DIDACTICA $25.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/camas-y-estar/camas/cama-con-diversion-para-gatos/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">more_vert</i></span>
+                <p>Plataforma Casa de cama para gatos con 2 pelotas de juguete en la base.
+                  <br>
+                  Tipo: Gato cama de la casa
+                  <br>
+                  Material: De plástico
+                  <br>
+                  Característica:
+                  <br>
+                  Esta cama es perfecta para gatitos de todas las edades, lugar cómodo y cálido para que tu mascota
+                  pueda dormir y relajarse, también es adecuada para cachorros, perros pequeños y otras mascotas
+                  pequeñas
+
+                  Refugio seguro de privacidad de su compañero peludo que necesita un poco de tranquilidad y espacio.
+
+                  Mantenimiento sin esfuerzo, ahorre tiempo en la limpieza, simplemente levante el cojín extraible y
+                  puede lavarlo en lavadora. en la lavadora.
+                  <br>
+                  Material del cojín: mezcla de algodón y poliéster.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/catalogox 7.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">CAMA EN FORMA DE CASA COLORES $25.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/camas-y-estar/camas/cama-en-forma-de-casa-colores-cod-bdb044/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Cama en forma de casa, ideal para que nuestros peluditos descansen de forma muy acogedora.
+                  <br>
+                  Medidas: 45*46*3
+                  <br>
+                  CAMA NO INDESTRUCTIBLE.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/catalogox 8.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">CAMA DISEÑO CIRCULAR CAFE <h1
+                    id="descuentos">$25.990</h1> $21.990<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/camas-y-estar/camas/cama-diseno-circular-cafe/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Medida:
+                  <br>
+                  Talla S: 45 x 45 x 20cm
+                  <br>
+                  Talla L: 55 X 55 X 22cm
+                  <br>
+                  NO ES ANTI MORDIDA
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/catalogox 9.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">CAMA DISEÑO PEZ $16.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a href="https://www.clubdeperrosygatos.cl/shop/camas-y-estar/camas/cama-diseno-pez/">Tienda de
+                    articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Medidas: 54*54*15cm
+                  <br>
+                  NO ES ANTI-MORDIDA
+                  <br>
+                  Recomendaciones: Lavar a mano, si va a ocupar lavadora que sea solo en modo delicado y no meter a la
+                  secadora.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Vestuario y accesorios-->
+      <div id="vestuario-y-accesorios" class="container tab-pane fade"><br>
+        <h3 id="articulocatalogo"> </h3>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 3.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Camiseta de futbol ChileDog <h1
+                    id="descuentos">$8.990</h1> $2.990<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/polerones/camisetas-deportivas-chiledog-la-roja-de-todos/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">more_vert</i></span>
+                <p>Polerón de algodón
+                  </br>
+                  Colores disponibles
+                  </br>
+                  Rojo con Azul
+                  </br>
+                  Por favor mide a tu mascota, las tallas pueden variar según el modelo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 4.png" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">GFPET CHAQUETA DENIM JACKET <h1
+                    id="descuentos">$34.990</h1> $24.290<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/polerones/gfpet-chaqueta-denim-jacket/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Las chaquetas y parkas GFPet poseen un sistema de ajuste elasticado al cuerpo de tu mascota, llamado
+                  «elastofit», que permite un calce perfecto y muy cómodo para tu perro.
+
+                  La chaqueta de mezclilla es 100% algodón, y tiene chiporro sherpa en su interior.
+                  </br>
+                  Máxima seguridad, comodidad y mucho estilo!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 15.png" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">GFPet | BANFF JACKET CAPUCHA <h1
+                    id="descuentos">$33.990</h1> $24.990<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/polerones/gfpet-banff-jacket-capucha/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Las chaquetas GFPet poseen un sistema de ajuste al cuerpo de tu mascota, llamado «elastofit», que
+                  permite un calce perfecto y muy cómodo para tu perro.
+                  <br>
+                  El modelo Banff jacket tiene forro de polar suave y capucha tejida con enganche.
+                  <br>
+                  Máxima seguridad, comodidad y mucho estilo!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 13.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Paraguas para perros, con correa para arnés
+                  <h1 id="descuentos">$4.990</h1> $1.990<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/accesorios/paraguas-estandar/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Club de Perros y Gatos vende Paraguas con correa que se engancha al arnés, con manilla para tu mano,
+                  el peso lo llevas tú, puedes acompañarlo con zapatitos que puedes encontrar con nosotros. No dejes de
+                  pasearlo, protégelo de la lluvia
+                  <br>
+                  Color disponible: Transparente
+                  <br>
+                  Tallas: Estándar , medida 79 cms de diametro
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 16.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Smoking para Perros y Gatos<h1
+                    id="descuentos"> $14.990</h1> $12.990<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/disfraces/traje-de-smoking/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Smoking para Perros y Gatos
+                  <br>
+                  Colores disponibles: Negro con humita roja
+                  <br>
+                  Tallas y valor:
+                  S, M y L
+                  <br>
+                  Talla S
+                  Cuello: 30cm
+                  Espalda: 27cm
+                  Pecho: 42cm
+                  <br>
+                  Talla M
+                  Cuello: 33cm
+                  Espalda: 32cm
+                  Pecho: 48cm
+                  <br>
+                  Talla L
+                  Cuello: 36cm
+                  Espalda: 37cm
+                  Pecho: 52cm
+                  <br>
+                  Por favor mide a tu mascota, las tallas pueden variar según el modelo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/catalogox 1.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Arnés – Mochila para perros y gatos, pequeña
+                  para accesorios <h1 id="descuentos">$12.990</h1> $10.990 <i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/accesorios/mochila-pequena-accesorios/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">more_vert</i></span>
+                <p>Arnés – Mochila para accesorios, permitirá que su incondicional porte sus bolsitas para recoger la
+                  feca, etc…no sobre-recargue su espaldita.
+                  <br>
+                  Color: Naranjo
+                  <br>
+                  Disponible en talla S y L
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/catalogox 2.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Chaqueta de Invierno $13.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/polerones/chaqueta-de-invierno/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">more_vert</i></span>
+                <p>Talla XS Contorno cuello 21 cms, contorno pecho 30 cms, Largo espalda 20 cms
+                  <br>
+                  Talla S Contorno cuello 24 cms, contorno pecho 35 cms, Largo espalda 25 cms
+                  <br>
+                  Talla M Contorno cuello 27 cms, contorno pecho 40 cms, Largo espalda 30 cms
+                  <br>
+                  Talla L Contorno cuello 30 cms, contorno pecho 45 cms, Largo espalda 35 cms
+                  <br>
+                  Talla XL Contorno cuello 33 cms, contorno pecho 50 cms, Largo espalda 40 cms
+                  <br>
+                  Por favor mide a tu mascota, las tallas pueden variar según el modelo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/catalogox 3.jpeg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">MANTA PELUDA $9.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a href="https://www.clubdeperrosygatos.cl/shop/vestuario-y-accesorios/manta-peluda-85x110cm/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">more_vert</i></span>
+                <p>Mantas ideales para gatitos y perritos.
+                  <br>
+                  Medida: 85 x 110cm
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6"> 
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 12.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">BOLSO TRANSPORTADOR HOJAS <h1 id="descuentos">$27.990</h1> $22.392<i class="material-icons right">more_vert</i></span>
+                <p><a href="https://www.clubdeperrosygatos.cl/shop/transporte-y-seguridad/transportadores/bolso-transportador-hojas/">Tienda de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i class="material-icons right">close</i></span>
+                <p>Bolso para transporte de pequeñas mascotas.
+                  <br>
+                  El Bolso con  diseño hojas soporta hasta aproximadamente 4 kg.  transpirable y fondo comodo para el traslado de nuestros peluditos.
+                  <br>
+                  Se puede plegar facilmente.
+                  <br>
+                  Medidas: Ancho 27cm – Alto 28cm – Profundidad 43cm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Juguetes-->
+      <div id="juguetes" class="container tab-pane fade"><br>
+        <h3 id="articulocatalogo"> </h3>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 5.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">AFP | LAMB PELUCHE EN FORMA DE HUESO 23cm
+                  $9.190<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/entretencion/perros-diversion/afp-lamb-peluche-en-forma-de-hueso-23cm/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Deje que su perro disfrute de la diversión de jugar con este hueso.
+                  <br>
+                  Está hecho de suave imitación de ante, cordero y cuerdas.
+                  <br>
+                  La tela proporciona una impresión táctil fantástica.
+                  <br>
+                  El squeaker interno atrae la atención del perro y lo atrae a tocar, y la cuerda anudada interna es
+                  buena para los dientes de los perros.
+                  <br>
+                  Características:
+                  <br> Duradero
+                  <br> Squeaker dentro para una mayor diversión
+                  <br> Suave
+                  Cuerda dental dentro
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 6.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">AFP | PUPS PERRITO MINI $9.190<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/entretencion/perros-diversion/afp-pups-perrito-mini/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Juguete especial para cachorro, suave y masticable que amará gracias a su variedad de textura,
+                  reforzando la fuerza de los dientitos de tu guagua de 4 patas.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!--Rascadores-->
+      <div id="Rascador" class="container tab-pane fade"><br>
+        <h3 id="articulocatalogo"> </h3>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 7.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Catit Senses 2.0 Masajeador de Pared $5.990
+                  <i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/entretencion/gatos-diversion/catit-senses-2-0-masajeador-pared/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Tu gato necesita un un lugar constante donde darse el gusto de frotarse y cepillarse.
+                  <br>
+                  Simplemente une el cepillo a una superficie a la altura de tu gato… ¡y listo!
+                  <br>
+                  Juguete no indestructible
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 8.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">RASCADOR COD 1710 – GRAFITO $74.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/camas-y-estar/rascadores/rascador-cod-1710-grafito/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Los rascadores para gatos, son perfectos para ayudar a que nuestros amigos felinos afilen sus uñas y
+                  marquen su territorio, sin que nuestro sofá o nuestras sillas salgan perjudicados.
+                  <br>
+                  Aunque los gatos como mascota llevan siglos con nosotros, siguen teniendo gran parte de la esencia
+                  salvaje de los felinos y necesitan liberar su instinto animal: arañan, muerden y cuando son cachorros,
+                  saltan y corren frenéticamente.
+                  <br>
+                  Soporta máximo de 4kg.
+                  <br>
+                  Medidas: Alto 94cm – Ancho 63 cm – Profundidad 35cm.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 9.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">RASGUÑADOR DISEÑO CASA TRIANGULAR $22.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/entretencion/gatos-diversion/rasgunador-diseno-casa-triangular/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Hecho de cartón reciclado, diseño atractivo.
+                  <br>
+                  Los gatos prefieren la sensación de un gran ejercicio en cartón y antiestrés.
+                  <br>
+                  Medidas: 45cm de alto – ancho 47 cm
+                  <br>
+                  Medidas de la entrada 18 cm de alto x 16 cm de ancho.
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 10.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Rascador Didáctico Para Gatos $18.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a href="https://www.clubdeperrosygatos.cl/shop/regalos/cat-lovers/rascador-didactico/">Tienda de
+                    articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Suave, cómodo y acogedor rascador eco friendly con hilo de sisal con hierba gatera, felpa no tóxico,
+                  natural, sin olor, armado muy simple, viene con tornillos de acero inoxidable, instrucciones de
+                  instalación, se recomienda mantener seco.
+                  <br>
+                  46cm de alto por 35cm.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/Rascador diseño.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">RASCADOR DISEÑO CILINDRO $35.990<i
+                    class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/entretencion/gatos-diversion/rascador-diseno-cilindro/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Divertido escondite con  suave de forro de felpa, para proporcionar la máxima comodidad a su mascota, para jugar y descansar.
+                  <br>
+                  Tiene un diseño simple que irá muy bien con cualquier decoración.
+                  <br>
+                  El escondite es divertido y acogedor para su gato, también puede estar sobre la plataforma y tener una vista mejor del espacio.
+                  <br>
+                  Altura 33 cms x  32 de ancho  x 32 cms de profundidad.
+                  <br>
+                  Abertura de la puerta
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/rascador triangular.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">RASGUÑADOR TRIANGULAR <h1 id="descuentos">
+                  $8.990</h1> $7.990 <i class="material-icons right">more_vert</i></span>
+                <p><a href="https://www.clubdeperrosygatos.cl/shop/alimentacion/platos/plato-en-altura/">Tienda de
+                    articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Material: Papel Corrugado
+                  <br>
+                  Medidas M: Alto 13cm – ancho 23 cm  – Profundidad 27 cm
+                  <br>
+                  Medidas L: Alto 15cm – Ancho 29cm – Profundidad 27cm
+                  <br>
+                  · Satisface los instintos y arañazos naturales de tu gato
+                  <br>
+                  · Peso ligero con el diseño de onda de nido de abeja, duradero y trae más diversión a su gato
+                  <br>
+                  · Hecho de cartón de revestimiento corrugado.
+                  <br>
+                  Los colores de las pelotas pueden variar.
+                </p>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+      <!--Bebederos-->
+      <div id="bebederos" class="container tab-pane fade"><br>
+        <h3 id="articulocatalogo"> </h3>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/producto 11.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Aqua Dog Botella Portatil<h1 id="descuentos">
+                    $5.990</h1> $3.990<i class="material-icons right">more_vert</i></span>
+                <p><a
+                    href="https://www.clubdeperrosygatos.cl/shop/alimentacion/bebederos/aqua-dog-botella-portatil/">Tienda
+                    de articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Sabemos que te encanta dar paseos con tus mascotas, divertirte y pasar el rato con ella, pero también
+                  debes tener en cuenta que ellos se cansan y deben mantenerse hidratados.
+                  <br>
+                  Por eso llega este innovador producto, de fácil uso y que no ocupa mucho espacio.
+                  <br>
+                  Aqua Dog es el bebedero de agua portátil ideal, simplemente llene el contenedor antes de su viaje y
+                  cuando su mascota tenga sed, apriete para llenar el tazón de fuente adjunto y acercar a su mascota,
+                  cuando haya terminado solo suelte para drenar el agua nuevamente dentro de la botella sin
+                  desperdiciar.
+                  <br>
+                  El agua sucia no se drenará dentro del bebedero, manteniendo el agua limpia.
+                  <br>
+                  Sin desperdicio de agua, sin derrames.
+                  <br>
+                  Ideal para perros de todos los tamaños y edades.
+                  <br>
+                  Se ajusta en el porta vasos de su vehículo
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l6">
+            <div class="card" id="card1">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Imagenes/bebedero 1.jpg" id="imagenpata">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">PLATO DOBLE EN ALTURA PARA PERROS Y GATOS
+                  $8.990<i class="material-icons right">more_vert</i></span>
+                <p><a href="https://www.clubdeperrosygatos.cl/shop/alimentacion/platos/plato-en-altura/">Tienda de
+                    articulos (Animalitos)</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i
+                    class="material-icons right">close</i></span>
+                <p>Largo: 40cm
+                  <br>
+                  Ancho: 21cm
+                  <br>
+                  Altura: 12cm
+                  <br>
+                  Plato: 17 cm de diámetro
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">pets</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">shopping_cart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">share</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">phone_in_talk</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">today</i></a></li>
+    </ul>
+  </div>
+
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems);
+  });
+  $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+  </script>
+  <!--Footer con informaciones-->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="deep-orange-text"><strong id="quienessomos">¿Quienes Somos?</strong></h5>
+          <p class="black-text text-lighten-4">Somos una tienda en la cual vende articulos para sus mascotas. </br>Son
+            articulos realmente bonitos para
+            regalonear a sus mascotas y jugar con ellas, ya que tenemos una gran variedad para todos los gustos.
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="deep-orange-text" id="teayudamosfooter"><strong>¿Te Ayudamos?</strong></h5>
+          <ul>
+            <i class="material-icons" id="iconsdireccion">place</i>
+            <strong id="spanfooter">Sucursal Nuñoa</strong>
+            <li><a class="black-text text-lighten-3"
+                href="https://www.google.com/maps/place/Club+de+Perros+y+Gatos+Avenida+Ossa/@-33.4411985,-70.5752535,17z/data=!3m1!4b1!4m5!3m4!1s0x9662cf5955d54bb5:0xe81da5b4c2872e13!8m2!3d-33.4412069!4d-70.5730974">Avenida
+                Ossa 1400, local 3, Metro Príncipe de Gales, Ñuñoa</a></li>
+            <i class="material-icons" id="iconsdireccion">place</i>
+            <strong id="spanfooter">Sucursal Santiago Centro</strong>
+            <li><a class="black-text text-lighten-3"
+                href="https://www.google.com/maps/place/Club+de+Perros+y+Gatos+Tienda+Mac+Iver/@-33.4372968,-70.6494392,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5aaa5b7163f:0x20bdaf3bf8e60dc1!8m2!3d-33.4373013!4d-70.6472505">Mac
+                Iver 468, Esquina Monjitas, Metro Bellas Artes o Plaza de Armas, Santiago Centro.</a></li>
+            <i class="material-icons" id="iconsdireccion">place</i>
+            <strong id="spanfooter">WhatsApp</strong>
+            <li><a class="black-text text-lighten-3" href="https://wa.me/+56994888066">+56994888066</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <strong> © 2021 Copyright Tienda Animalitos</strong>
+      </div>
+    </div>
+  </footer>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
