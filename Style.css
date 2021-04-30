@@ -158,3 +158,11 @@ body {
   margin-bottom: 100px;
   
 }
+
+
+#tablahorario{
+  text-align: center;
+  padding: 120px;
+  color: chocolate;
+  font-family: Arial, Helvetica, sans-serif;
+}
